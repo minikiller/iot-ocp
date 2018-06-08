@@ -1,4 +1,4 @@
-FROM rhel:7.2
+FROM rhel:7.4
 
 MAINTAINER Andrew Block <andy.block@gmail.com>
 
