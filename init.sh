@@ -279,7 +279,7 @@ function do_configure_ocp() {
     echo "Creating Project: ${IOT_OCP_PROJECT}..."
     echo
     oc new-project ${IOT_OCP_PROJECT} --description="Showcases an Intelligent Internet-of-Things (IoT) Gateway on Red Hat’s OpenShift Container Platform" --display-name="Internet of Things (IoT) OpenShift Demo Project" >/dev/null 2>&1
-
+    oc adm policy add-scc-to-user anyuid -z default >/dev/null 2>&1
     if [ ! -z ${ADMIN_ADDL_USERNAME} ]; then
         echo
         echo "Adding admin role to ${ADMIN_ADDL_USERNAME}..."
