@@ -14,7 +14,7 @@ ENV HOME=/opt/zeppelin \
     ZEPPELIN_INTERPRETER_DIR=/opt/zeppelin/storage/interpreter
 
 
-RUN yum clean all 
+#RUN yum clean all 
 RUN export INSTALL_PKGS="java-1.8.0-openjdk-devel java-1.8.0-openjdk-headless gettext tar git which unzip"
 RUN yum install -y --setopt=tsflags=nodocs $INSTALL_PKGS
 RUN rpm -V $INSTALL_PKGS && \
