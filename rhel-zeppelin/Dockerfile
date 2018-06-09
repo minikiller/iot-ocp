@@ -17,7 +17,7 @@ ENV HOME=/opt/zeppelin \
 RUN yum clean all && \
     export INSTALL_PKGS="java-1.8.0-openjdk-devel java-1.8.0-openjdk-headless gettext tar git which unzip" && \
     yum install -y --setopt=tsflags=nodocs $INSTALL_PKGS && \
-    rpm -V $INSTALL_PKGS && \
+    #rpm -V $INSTALL_PKGS && \
     yum clean all && \
     mkdir -p $HOME/server $HOME/bin $HOME/storage && \
     curl -fsSL http://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz | tar xzf - -C /usr/share \
